@@ -21,7 +21,7 @@ export default function HeroSection() {
           waveSpeed={0.019}
           waveFrequency={3.8}
           waveAmplitude={0.3}
-          waveColor={[0.44,0.53 , 0.53]}
+          waveColor={[0.44, 0.53, 0.53]}
           colorNum={6}
           pixelSize={4}
           disableAnimation={disableAnimation}

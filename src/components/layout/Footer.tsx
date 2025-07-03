@@ -1,4 +1,10 @@
-import { FaGithub, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from 'react-icons/fa';
 import { SiHashnode } from 'react-icons/si';
 import { contactInfo, socialLinks } from '@/app/config';
 import { HiMail, HiLocationMarker } from 'react-icons/hi';
@@ -11,7 +17,7 @@ const Footer = () => {
         <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
           <div className='flex flex-col items-center md:items-start'>
             <h3 className='mb-4 text-lg font-semibold text-white'>Follow Us</h3>
-            <div className='flex flex-wrap items-center justify-center md:justify-start gap-3'>
+            <div className='flex flex-wrap items-center justify-center gap-3 md:justify-start'>
               <a
                 href={socialLinks.hashnode}
                 target='_blank'
@@ -62,27 +68,31 @@ const Footer = () => {
           <div className='grid gap-6 md:col-span-1 lg:col-span-2'>
             <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2'>
               <div className='flex items-center rounded-lg border border-gray-700/50 bg-gray-900/50 p-4 backdrop-blur-sm'>
-                <div className='mr-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500/20 to-indigo-500/20 flex-shrink-0'>
+                <div className='mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500/20 to-indigo-500/20'>
                   <HiMail className='h-6 w-6 text-purple-400' />
                 </div>
                 <div className='min-w-0 flex-1'>
                   <h3 className='text-lg font-semibold text-white'>Email</h3>
-                  <p className='text-gray-400 text-sm md:text-base break-all'>
-                    <a href={`mailto:${contactInfo.email}`} className="hover:underline">
+                  <p className='text-sm break-all text-gray-400 md:text-base'>
+                    <a
+                      href={`mailto:${contactInfo.email}`}
+                      className='hover:underline'
+                    >
                       {contactInfo.email}
                     </a>
                   </p>
                 </div>
               </div>
-              
 
               <div className='flex items-center rounded-lg border border-gray-700/50 bg-gray-900/50 p-4 backdrop-blur-sm'>
-                <div className='mr-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-green-500/20 to-blue-500/20 flex-shrink-0'>
+                <div className='mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-green-500/20 to-blue-500/20'>
                   <HiLocationMarker className='h-6 w-6 text-green-400' />
                 </div>
                 <div className='min-w-0 flex-1'>
                   <h3 className='text-lg font-semibold text-white'>Location</h3>
-                  <p className='text-gray-400 text-sm md:text-base'>{contactInfo.add}</p>
+                  <p className='text-sm text-gray-400 md:text-base'>
+                    {contactInfo.add}
+                  </p>
                 </div>
               </div>
             </div>
@@ -90,7 +100,7 @@ const Footer = () => {
         </div>
 
         <div className='mt-8 border-t border-gray-700/50 pt-6 text-center'>
-          <span className='text-gray-400 text-sm md:text-base'>
+          <span className='text-sm text-gray-400 md:text-base'>
             © COPS {year}. All rights reserved.
           </span>
         </div>

@@ -41,48 +41,42 @@ const helm: HelmTerm[] = [
         email: 'sagnik.mandal.mst23@iitbhu.ac.in',
         por: 'Secretary',
         photo: 'https://i.pravatar.cc/300',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Pratham Seth',
         email: 'pratham.seth.cer23@itbhu.ac.in',
         por: 'Joint Secretary',
         photo: 'https://i.pravatar.cc/300',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Sakshi Kumar',
         email: 'sakshi.kumar.cd.eee23@itbhu.ac.in',
         por: 'Joint Secretary',
         photo: 'https://i.pravatar.cc/300',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Aayush Khanna',
         email: 'aayush.khanna.cd.civ23@iitbhu.ac.in',
         por: 'Technical Lead',
         photo: 'https://i.pravatar.cc/300',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Parth Dabas',
         email: 'parth.dabas.cse23@iitbhu.ac.in',
         por: 'Technical Lead',
         photo: 'https://i.pravatar.cc/300',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Yashashwi Singhania',
         email: 'yashashwi.singhania.bce23@itbhu.ac.in',
         por: 'Category Head',
         photo: 'https://i.pravatar.cc/300',
-        socials: {
-        },
+        socials: {},
       },
     ],
   },
@@ -93,56 +87,49 @@ const helm: HelmTerm[] = [
         name: 'Shivansh Bhatnagar',
         email: '',
         por: 'Secretary',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Yuval Goyal',
         email: '',
         por: 'Joint Secretary',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Nikhil Totla',
         email: '',
         por: 'Joint Secretary',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Varun Kolanu',
         email: '',
         por: 'Software Development Group Head',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Jay Vinchhi',
         email: '',
         por: 'Competitive Programming Group Head',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Shashank Shekhar Singh',
         email: '',
         por: 'Intelligence Group Head',
-        socials: {
-        },
+        socials: {},
       },
       {
         name: 'Abhinav Lenka',
         email: '',
         por: 'Infosec Head',
-        socials: {
-        },
+        socials: {},
       },
     ],
   },
 ];
 
-const projects = []
+const projects = [];
 
-const achievements = []
+const achievements = [];
 export { helm, contactInfo, socialLinks, projects, achievements };
