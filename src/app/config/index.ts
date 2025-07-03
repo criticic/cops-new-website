@@ -1,3 +1,23 @@
+// Type definitions
+interface TeamMember {
+  name: string;
+  email: string;
+  por: string;
+  photo?: string;
+  socials: {
+    twitter?: string;
+    linkedin?: string;
+    github?: string;
+    instagram?: string;
+    website?: string;
+  };
+}
+
+interface HelmTerm {
+  term: string;
+  team: TeamMember[];
+}
+
 const contactInfo = {
   email: 'iitbhu.cops@gmail.com',
   add: 'IIT-BHU Gymkhana, Varanasi, 221005',
@@ -12,68 +32,56 @@ const socialLinks = {
   hashnode: 'https://blogs.copsiitbhu.co.in/',
 };
 
-const helm = [
+const helm: HelmTerm[] = [
   {
     term: '2025-2026',
     team: [
       {
-        Name: 'Sagnik Mandal',
+        name: 'Sagnik Mandal',
         email: 'sagnik.mandal.mst23@iitbhu.ac.in',
         por: 'Secretary',
+        photo: 'https://i.pravatar.cc/300',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Pratham Seth',
+        name: 'Pratham Seth',
         email: 'pratham.seth.cer23@itbhu.ac.in',
         por: 'Joint Secretary',
+        photo: 'https://i.pravatar.cc/300',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Sakshi Kumar',
+        name: 'Sakshi Kumar',
         email: 'sakshi.kumar.cd.eee23@itbhu.ac.in',
         por: 'Joint Secretary',
+        photo: 'https://i.pravatar.cc/300',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Aayush Khanna',
+        name: 'Aayush Khanna',
         email: 'aayush.khanna.cd.civ23@iitbhu.ac.in',
         por: 'Technical Lead',
+        photo: 'https://i.pravatar.cc/300',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Parth Dabas',
+        name: 'Parth Dabas',
         email: 'parth.dabas.cse23@iitbhu.ac.in',
         por: 'Technical Lead',
+        photo: 'https://i.pravatar.cc/300',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Yashashwi Singhania',
+        name: 'Yashashwi Singhania',
         email: 'yashashwi.singhania.bce23@itbhu.ac.in',
         por: 'Category Head',
+        photo: 'https://i.pravatar.cc/300',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
     ],
@@ -82,63 +90,52 @@ const helm = [
     term: '2024-2025',
     team: [
       {
-        Name: 'Sagnik Mandal',
-        email: 'sagnik.mandal.mst23@iitbhu.ac.in',
+        name: 'Shivansh Bhatnagar',
+        email: '',
         por: 'Secretary',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Pratham Seth',
-        email: 'pratham.seth.cer23@itbhu.ac.in',
+        name: 'Yuval Goyal',
+        email: '',
         por: 'Joint Secretary',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Sakshi Kumar',
-        email: 'sakshi.kumar.cd.eee23@itbhu.ac.in',
+        name: 'Nikhil Totla',
+        email: '',
         por: 'Joint Secretary',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Aayush Khanna',
-        email: 'aayush.khanna.cd.civ23@iitbhu.ac.in',
-        por: 'Technical Lead',
+        name: 'Varun Kolanu',
+        email: '',
+        por: 'Software Development Group Head',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Parth Dabas',
-        email: 'parth.dabas.cse23@iitbhu.ac.in',
-        por: 'Technical Lead',
+        name: 'Jay Vinchhi',
+        email: '',
+        por: 'Competitive Programming Group Head',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
         },
       },
       {
-        Name: 'Yashashwi Singhania',
-        email: 'yashashwi.singhania.bce23@itbhu.ac.in',
-        por: 'Category Head',
+        name: 'Shashank Shekhar Singh',
+        email: '',
+        por: 'Intelligence Group Head',
         socials: {
-          twitter: '',
-          linkedin: '',
-          github: '',
+        },
+      },
+      {
+        name: 'Abhinav Lenka',
+        email: '',
+        por: 'Infosec Head',
+        socials: {
         },
       },
     ],

@@ -65,7 +65,7 @@ export default function Navbar() {
 
   return (
     <nav className='fixed top-6 left-1/2 z-50 w-full max-w-6xl -translate-x-1/2 transform px-4'>
-      <div className='rounded-2xl border border-white/20 bg-white/10 px-4 py-4 shadow-2xl backdrop-blur-xl sm:rounded-full sm:px-8'>
+      <div className='rounded-2xl border border-white/20 bg-white/10 px-4 py-4 shadow-2xl backdrop-blur-xl sm:rounded-2xl sm:px-8'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center'>
             <div className='flex-shrink-0'>
@@ -85,25 +85,25 @@ export default function Navbar() {
             <div className='flex items-center space-x-6'>
               <Link
                 href='/projects'
-                className='rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
               >
                 Projects
               </Link>
               <Link
                 href='/team'
-                className='rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
               >
                 Team
               </Link>
               <Link
                 href='/achievements'
-                className='rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
               >
                 Achievements
               </Link>
               <Link
                 href='/contact'
-                className='rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
               >
                 Contact
               </Link>
@@ -148,28 +148,28 @@ export default function Navbar() {
             <div className='flex flex-col space-y-2'>
               <Link
                 href='/projects'
-                className='rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link
                 href='/team'
-                className='rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Team
               </Link>
               <Link
                 href='/achievements'
-                className='rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Achievements
               </Link>
               <Link
                 href='/contact'
-                className='rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
