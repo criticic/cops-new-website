@@ -7,7 +7,7 @@ export default function TeamPage() {
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='mb-16 text-center'>
             <h1 className='mb-4 text-4xl font-bold text-white md:text-5xl'>
-              Meet Our <span className='text-purple-400'>Team</span>
+              Meet Our <span className='text-[#68d9d9]'>Team</span>
             </h1>
           </div>
 

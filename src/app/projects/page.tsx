@@ -5,7 +5,7 @@ export default function ProjectsPage() {
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='mb-16 text-center'>
             <h1 className='mb-4 text-4xl font-bold text-white md:text-5xl'>
-              Our <span className='text-purple-400'>Projects</span>
+              Our <span className='text-[#68d9d9]'>Projects</span>
             </h1>
           </div>
 

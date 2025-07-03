@@ -8,7 +8,7 @@ export default function ContactPage() {
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='mb-16 text-center'>
             <h1 className='mb-4 text-4xl font-bold text-white md:text-5xl'>
-              Get in <span className='text-purple-400'>Touch</span>
+              Get in <span className='text-[#68d9d9]'>Touch</span>
             </h1>
             <p className='mx-auto max-w-2xl text-lg text-gray-400'>
               Ready to join our programming community? We&apos;d love to hear
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 </div>
                 <button
                   type='submit'
-                  className='w-full rounded-lg bg-purple-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-purple-700'
+                  className='w-full rounded-lg bg-[#68d9d9] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#638b8b]'
                 >
                   Send Message
                 </button>
