@@ -16,12 +16,12 @@ export default function HeroSection() {
   return (
     <section className='relative min-h-screen overflow-hidden bg-gray-900'>
       {/* Dithered Waves Background */}
-      <div className='fixed inset-0 z-0'>
+      <div className='absolute inset-0 z-0'>
         <Dither
           waveSpeed={0.019}
           waveFrequency={3.8}
           waveAmplitude={0.3}
-          waveColor={[0.53, 0.44, 0.53]}
+          waveColor={[0.44,0.53 , 0.53]}
           colorNum={6}
           pixelSize={4}
           disableAnimation={disableAnimation}
