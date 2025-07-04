@@ -137,6 +137,8 @@ interface Achievement {
   description: string;
   year: number;
   isStarred: boolean;
+  position?: number;
+  category?: string;
 }
 
 const achievements: Achievement[] = [
@@ -146,6 +148,8 @@ const achievements: Achievement[] = [
     description: 'Recognized for outstanding contribution to programming education',
     year: 2024,
     isStarred: true,
+    position: 1,
+    category: "cp",
   },
   {
     title: 'Hackathon Champions',
@@ -153,6 +157,8 @@ const achievements: Achievement[] = [
     description: 'First place in National Inter-University Hackathon',
     year: 2023,
     isStarred: true,
+    position: 1,
+    category: "dev",
   },
   {
     title: 'Open Source Contribution',
@@ -160,6 +166,35 @@ const achievements: Achievement[] = [
     description: 'Over 1000 contributions to open source projects',
     year: 2023,
     isStarred: true,
+    position: 2,
+    category: "dev",
+  },
+  {
+    title: 'Open Source Contribution',
+    level: 'GitHub Recognition',
+    description: 'Over 1000 contributions to open source projects',
+    year: 2023,
+    isStarred: true,
+    position: 2,
+    category: "dev",
+  },
+  {
+    title: 'Open Source Contribution',
+    level: 'GitHub Recognition',
+    description: 'Over 1000 contributions to open source projects',
+    year: 2023,
+    isStarred: true,
+    position: 2,
+    category: "dev",
+  },
+  {
+    title: 'Open Source Contribution',
+    level: 'GitHub Recognition',
+    description: 'Over 1000 contributions to open source projects',
+    year: 2023,
+    isStarred: true,
+    position: 2,
+    category: "dev",
   },
   {
     title: 'Community Impact Award',
@@ -167,9 +202,27 @@ const achievements: Achievement[] = [
     description: 'Acknowledged for significant contributions to the local community',
     year: 2022,
     isStarred: false,
+    position: 3,
+    category: "community"
+  },
+  {
+    title: 'Community Impact Award',
+    level: 'Local Recognition',
+    description: 'Acknowledged for significant contributions to the local community',
+    year: 2022,
+    isStarred: false,
+    category: "community"
+  },
+  {
+    title: 'Community Impact Award',
+    level: 'Local Recognition',
+    description: 'Acknowledged for significant contributions to the local community',
+    year: 2022,
+    isStarred: false,
+    position: 3,
   },
 ];
 
-const years=[2022,2023,2024];
+const years=[2024,2023,2022];
 
 export { years, helm, contactInfo, socialLinks, projects, achievements };
