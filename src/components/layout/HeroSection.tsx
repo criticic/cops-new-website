@@ -25,13 +25,14 @@ export default function HeroSection() {
           colorNum={6}
           pixelSize={4}
           disableAnimation={disableAnimation}
-          enableMouseInteraction={false}
+          enableMouseInteraction={true}
+          mouseRadius={0.5}
         />
       </div>
 
-      <div className='absolute inset-0 z-10 bg-black/30'></div>
+      <div className='pointer-events-none absolute inset-0 z-10 bg-black/30'></div>
 
-      <div className='relative z-20 pt-16'>
+      <div className='pointer-events-none relative z-20 pt-16'>
         <div className='mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8'>
           <div className='flex min-h-[80vh] flex-col items-center justify-center text-center'>
             <div className='mb-8'>
