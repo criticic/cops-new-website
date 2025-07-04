@@ -169,4 +169,7 @@ const achievements: Achievement[] = [
     isStarred: false,
   },
 ];
-export { helm, contactInfo, socialLinks, projects, achievements };
+
+const years=[2022,2023,2024];
+
+export { years, helm, contactInfo, socialLinks, projects, achievements };
