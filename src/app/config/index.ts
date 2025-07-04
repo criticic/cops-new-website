@@ -131,5 +131,45 @@ const helm: HelmTerm[] = [
 
 const projects = [];
 
-const achievements = [];
-export { helm, contactInfo, socialLinks, projects, achievements };
+interface Achievement {
+  title: string;
+  level: string;
+  description: string;
+  year: number;
+  isStarred: boolean;
+}
+
+const achievements: Achievement[] = [
+  {
+    title: 'Best Programming Club 2024',
+    level: 'University Award',
+    description: 'Recognized for outstanding contribution to programming education',
+    year: 2024,
+    isStarred: true,
+  },
+  {
+    title: 'Hackathon Champions',
+    level: 'National Competition',
+    description: 'First place in National Inter-University Hackathon',
+    year: 2023,
+    isStarred: true,
+  },
+  {
+    title: 'Open Source Contribution',
+    level: 'GitHub Recognition',
+    description: 'Over 1000 contributions to open source projects',
+    year: 2023,
+    isStarred: true,
+  },
+  {
+    title: 'Community Impact Award',
+    level: 'Local Recognition',
+    description: 'Acknowledged for significant contributions to the local community',
+    year: 2022,
+    isStarred: false,
+  },
+];
+
+const years=[2022,2023,2024];
+
+export { years, helm, contactInfo, socialLinks, projects, achievements };
