@@ -101,12 +101,6 @@ export default function Navbar() {
               >
                 Achievements
               </Link>
-              <Link
-                href='/contact'
-                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
-              >
-                Contact
-              </Link>
             </div>
           </div>
 
@@ -166,13 +160,6 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Achievements
-              </Link>
-              <Link
-                href='/contact'
-                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
               </Link>
             </div>
           </div>
