@@ -3,7 +3,7 @@ import FuzzyText from '@/components/FuzzyText';
 const NotFound = () => {
   return (
     <div className='flex h-screen items-center justify-center'>
-      <div className='flex h-fit w-fit flex-col items-center justify-center gap-10'>
+      <div className='relative z-20 flex h-fit w-fit flex-col items-center justify-center gap-10'>
         <FuzzyText
           baseIntensity={0.2}
           hoverIntensity={1.34}

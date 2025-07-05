@@ -1,5 +1,5 @@
-import { achievements } from "@/app/config";
-import Link from "next/link";
+import { achievements } from '@/app/config';
+import Link from 'next/link';
 import { GiAchievement } from 'react-icons/gi';
 
 export default function AchievementsSection() {
@@ -11,7 +11,7 @@ export default function AchievementsSection() {
   };
 
   return (
-    <section className='relative bg-black py-20'>
+    <section className='relative py-20'>
       <div className='relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='text-center'>
           <h2 className='mb-4 text-3xl font-bold text-white md:text-4xl'>
