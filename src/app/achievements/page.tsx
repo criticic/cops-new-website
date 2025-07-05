@@ -30,7 +30,7 @@ export default function AchievementsPage() {
                 .map(([year, yearAchievements]) => (
                 <div key={year}>
                   <h2 className="text-center text-4xl mb-3 font-bold text-blue-500">{year}</h2>
-                  <div className='h-fit grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(400px,200px))] justify-center'>
+                  <div className='h-fit grid lg:grid-cols-3 gap-8 [grid-template-columns:repeat(auto-fit,minmax(400px,200px))] justify-center'>
                   {yearAchievements?.map((achievement) => (
                   <div key={achievement.title} className='rounded-lg border border-gray-700/50 bg-gray-900/50 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:bg-gray-900/70'>
                     <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-500/20 to-orange-500/20'>
