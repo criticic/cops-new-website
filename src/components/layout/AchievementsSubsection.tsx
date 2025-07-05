@@ -3,11 +3,11 @@ import Link from "next/link";
 import { GiAchievement } from 'react-icons/gi';
 
 export default function AchievementsSection() {
-  
+
   const colorMap: Record<number, string> = {
-    1: 'text-yellow-500',  
-    2: 'text-gray-400',    
-    3: 'text-orange-500',   
+    1: 'text-[#FFD700]', // Gold color
+    2: 'text-[#C0C0C0]', // Silver color
+    3: 'text-[#CD7F32]', // Bronze color
   };
 
   return (
