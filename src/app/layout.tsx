@@ -59,9 +59,9 @@ export default function RootLayout({
             pixelSize={4}
             disableAnimation={false}
             enableMouseInteraction={false}
+            mouseRadius={0.5}
           />
         </div>
-        <div className='fixed inset-0 z-[-1] bg-black/30'></div>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>
