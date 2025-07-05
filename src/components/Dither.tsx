@@ -206,8 +206,28 @@ const PerformanceDitheredWaves = React.memo((props: any) => {
     }
   });
 
-  // Most efficient mouse handler: directly update the uniform without causing a React re-render.
+  // Most efficient mouse handler: listen to global mouse events to avoid z-index issues.
+  useEffect(() => {
+    if (!enableMouseInteraction) return;
+    
+    const handleGlobalPointerMove = (e: PointerEvent) => {
+      const dpr = gl.getPixelRatio();
+      uniformsRef.current.mousePos.value.x = e.clientX * dpr;
+      // We need to invert Y for shader coordinates
+      uniformsRef.current.mousePos.value.y = (e.clientY) * dpr;
+    };
+
+    // Add global event listener
+    document.addEventListener('pointermove', handleGlobalPointerMove);
+    
+    // Cleanup
+    return () => {
+      document.removeEventListener('pointermove', handleGlobalPointerMove);
+    };
+  }, [enableMouseInteraction, gl, size]);
+
   const handlePointerMove = (e: ThreeEvent<PointerEvent>) => {
+    // Keep this for backward compatibility, but the global listener above handles most cases
     if (!enableMouseInteraction) return;
     const dpr = gl.getPixelRatio();
     uniformsRef.current.mousePos.value.x = e.clientX * dpr;
