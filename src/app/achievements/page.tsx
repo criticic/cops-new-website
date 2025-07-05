@@ -7,7 +7,10 @@ export default function AchievementsPage() {
     2: 'text-gray-400',
     3: 'text-orange-500',
   };
-  const achievementsByYear = Object.groupBy(achievements, (achievement) => achievement.year);
+  const achievementsByYear = Object.groupBy(
+    achievements,
+    (achievement) => achievement.year
+  );
 
   return (
     <div className='min-h-screen'>
@@ -28,39 +31,46 @@ export default function AchievementsPage() {
               {Object.entries(achievementsByYear)
                 .sort(([a], [b]) => Number(b) - Number(a))
                 .map(([year, yearAchievements]) => (
-                <div key={year}>
-                  <h2 className="text-center text-4xl mb-3 font-bold text-blue-500">{year}</h2>
-                  <div className='h-fit grid lg:grid-cols-3 gap-8 [grid-template-columns:repeat(auto-fit,minmax(400px,200px))] justify-center'>
-                  {yearAchievements?.map((achievement) => (
-                  <div key={achievement.title} className='rounded-lg border border-gray-700/50 bg-gray-900/50 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:bg-gray-900/70'>
-                    <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-500/20 to-orange-500/20'>
-                      <GiAchievement
-                        className={`h-10 w-10 ${
-                        achievement.position && colorMap[achievement.position]
-                          ? colorMap[achievement.position]
-                          : 'text-white'
-                      } hover:brightness-125 transition-all duration-1000`}
-                    />
+                  <div key={year}>
+                    <h2 className='mb-3 text-center text-4xl font-bold text-blue-500'>
+                      {year}
+                    </h2>
+                    <div className='mx-4 grid h-fit [grid-template-columns:repeat(auto-fit,minmax(400px,200px))] justify-center gap-8 lg:grid-cols-3'>
+                      {yearAchievements?.map((achievement) => (
+                        <div
+                          key={achievement.title}
+                          className='rounded-lg border border-white/20 bg-white/10 p-6 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-white/15 hover:shadow-lg'
+                        >
+                          <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-500/20 to-orange-500/20'>
+                            <GiAchievement
+                              className={`h-10 w-10 ${
+                                achievement.position &&
+                                colorMap[achievement.position]
+                                  ? colorMap[achievement.position]
+                                  : 'text-white'
+                              } transition-all duration-1000 hover:brightness-125`}
+                            />
+                          </div>
+                          <h3 className='mb-2 text-xl font-semibold text-white'>
+                            {achievement.title}
+                          </h3>
+                          <p className='mb-2 text-yellow-400'>
+                            {achievement.level}
+                          </p>
+                          <p className='text-sm text-gray-300'>
+                            {achievement.description}
+                          </p>
+                          {achievement.category && (
+                            <span className='mt-3 inline-block rounded-full bg-blue-600/20 px-3 py-1 text-sm text-blue-300'>
+                              {achievement.category}
+                            </span>
+                          )}
+                        </div>
+                      ))}
                     </div>
-                    <h3 className='mb-2 text-xl font-semibold text-white'>
-                      {achievement.title}
-                    </h3>
-                    <p className='mb-2 text-yellow-400'>{achievement.level}</p>
-                    <p className='text-sm text-gray-300'>
-                      {achievement.description}
-                    </p>
-                    {achievement.category && (
-                      <span className="inline-block mt-3 px-3 py-1 text-sm rounded-full bg-blue-600/20 text-blue-300">
-                        {achievement.category}
-                      </span>
-                    )}
                   </div>
-                  ))}
-                  </div>
-
-                </div>
-              ))}
-                </div>
+                ))}
+            </div>
           </div>
 
           {/* Stats Section */}

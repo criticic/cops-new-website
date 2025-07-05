@@ -150,7 +150,7 @@ const achievements: Achievement[] = [
     year: 2023,
     isStarred: true,
     position: 1,
-    category: "dev",
+    category: 'dev',
   },
   {
     title: 'Summer of Bitcoin 2023',
@@ -160,34 +160,7 @@ const achievements: Achievement[] = [
     year: 2023,
     isStarred: true,
     position: 2,
-    category: "dev",
-  },
-  {
-    title: 'Open Source Contribution',
-    level: 'GitHub Recognition',
-    description: 'Over 1000 contributions to open source projects',
-    year: 2023,
-    isStarred: true,
-    position: 2,
-    category: "dev",
-  },
-  {
-    title: 'Open Source Contribution',
-    level: 'GitHub Recognition',
-    description: 'Over 1000 contributions to open source projects',
-    year: 2023,
-    isStarred: true,
-    position: 2,
-    category: "dev",
-  },
-  {
-    title: 'Open Source Contribution',
-    level: 'GitHub Recognition',
-    description: 'Over 1000 contributions to open source projects',
-    year: 2023,
-    isStarred: true,
-    position: 2,
-    category: "dev",
+    category: 'dev',
   },
   {
     title: 'Summer of Reproducibility 2023',
@@ -204,7 +177,7 @@ const achievements: Achievement[] = [
       'Three students were accepted as mentees in the LFX Mentorship Spring 2023.',
     year: 2023,
     isStarred: false,
-    category: "dev",
+    category: 'dev',
   },
   {
     title: 'Google Summer of Code 2022',
@@ -213,7 +186,7 @@ const achievements: Achievement[] = [
       '24 students were selected, with 3 acting as mentors and 1 as an organization admin.',
     year: 2022,
     isStarred: true,
-    category: "dev",
+    category: 'dev',
   },
   {
     title: 'Summer of Bitcoin 2022',
@@ -222,7 +195,7 @@ const achievements: Achievement[] = [
       '3 students were selected as mentees under the Summer of Bitcoin program.',
     year: 2022,
     isStarred: true,
-    category: "dev",
+    category: 'dev',
   },
   {
     title: 'Outreachy 2022',
@@ -232,23 +205,7 @@ const achievements: Achievement[] = [
     year: 2022,
     isStarred: false,
     position: 3,
-    category: "community"
-  },
-  {
-    title: 'Community Impact Award',
-    level: 'Local Recognition',
-    description: 'Acknowledged for significant contributions to the local community',
-    year: 2022,
-    isStarred: false,
-    category: "community"
-  },
-  {
-    title: 'Community Impact Award',
-    level: 'Local Recognition',
-    description: 'Acknowledged for significant contributions to the local community',
-    year: 2022,
-    isStarred: false,
-    position: 3,
+    category: 'community',
   },
   {
     title: 'LFX Mentorship Program Fall 2022',
@@ -257,7 +214,7 @@ const achievements: Achievement[] = [
       'Two students were accepted as mentees in the LFX Mentorship Fall 2022.',
     year: 2022,
     isStarred: false,
-    category: "dev",
+    category: 'dev',
   },
   {
     title: 'Google Summer of Code 2021',
@@ -266,7 +223,7 @@ const achievements: Achievement[] = [
       '23 students were selected, making IIT (BHU) the second-highest selected institute globally.',
     year: 2021,
     isStarred: true,
-    category: "dev",
+    category: 'dev',
   },
   {
     title: '10th Inter IIT Tech Meet',
@@ -307,7 +264,7 @@ const achievements: Achievement[] = [
       '10 students were selected, placing IIT (BHU) among the top 10 institutes worldwide.',
     year: 2020,
     isStarred: true,
-    category: "dev"
+    category: 'dev',
   },
   {
     title: 'ICPC World Finals 2019-2020',
@@ -324,7 +281,7 @@ const achievements: Achievement[] = [
       'Nine students from the club were selected for the Google Summer of Code program.',
     year: 2019,
     isStarred: true,
-    category: "dev",
+    category: 'dev',
   },
   {
     title: '7th Inter IIT Tech Meet 2018',
@@ -341,7 +298,7 @@ const achievements: Achievement[] = [
       'Seven students from the club were selected for the Google Summer of Code program.',
     year: 2018,
     isStarred: true,
-    category: "dev"
+    category: 'dev',
   },
   {
     title: 'Third at ICPC Kanpur Regionals 2017',
@@ -369,6 +326,6 @@ const achievements: Achievement[] = [
   },
 ];
 
-const years=[2024,2023,2022,2021,2020,2019,2018,2017,2016];
+const years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016];
 
 export { years, helm, contactInfo, socialLinks, projects, achievements };
