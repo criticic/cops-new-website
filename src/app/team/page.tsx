@@ -10,8 +10,8 @@ import { helm } from '../config';
 
 export default function TeamPage() {
   return (
-    <div className='min-h-screen bg-black'>
-      <div className='pt-32 pb-20'>
+    <div className='min-h-screen'>
+      <div className='relative z-20 pt-32 pb-20'>
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='mb-16 text-center'>
             <h1 className='mb-4 text-4xl font-bold text-white md:text-5xl'>
@@ -30,10 +30,10 @@ export default function TeamPage() {
                   const isCurrentTerm = year.term === '2025-2026';
                   return (
                     <div
-                      className={`flex flex-col items-center rounded-lg border p-6 text-center backdrop-blur-sm transition-all duration-300 ${
+                      className={`flex flex-col items-center rounded-lg border p-6 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 ${
                         isCurrentTerm
-                          ? 'border-[#68d9d9]/30 bg-gray-900/70 hover:border-[#68d9d9]/50 hover:bg-gray-900/90 hover:shadow-lg hover:shadow-[#68d9d9]/20'
-                          : 'border-gray-700/50 bg-gray-900/50 hover:bg-gray-900/70'
+                          ? 'border-[#68d9d9]/30 bg-white/10 hover:border-[#68d9d9]/50 hover:bg-white/15 hover:shadow-lg hover:shadow-[#68d9d9]/20'
+                          : 'border-white/20 bg-white/10 hover:border-white/30 hover:bg-white/15'
                       }`}
                       key={personIndex}
                     >
