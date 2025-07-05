@@ -2,6 +2,11 @@ import { achievements } from '../config';
 import { GiAchievement } from 'react-icons/gi';
 
 export default function AchievementsPage() {
+  const colorMap: Record<number, string> = {
+    1: 'text-yellow-500',
+    2: 'text-gray-400',
+    3: 'text-orange-500',
+  };
   const achievementsByYear = Object.groupBy(
     achievements,
     (achievement) => achievement.year
@@ -30,14 +35,21 @@ export default function AchievementsPage() {
                     <h2 className='mb-3 text-center text-4xl font-bold text-blue-500'>
                       {year}
                     </h2>
-                    <div className='grid h-fit [grid-template-columns:repeat(auto-fit,minmax(400px,200px))] justify-center gap-8'>
+                    <div className='mx-4 grid h-fit [grid-template-columns:repeat(auto-fit,minmax(400px,200px))] justify-center gap-8 lg:grid-cols-3'>
                       {yearAchievements?.map((achievement) => (
                         <div
                           key={achievement.title}
-                          className='rounded-lg border border-white/20 bg-white/10 p-6 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-white/15'
+                          className='rounded-lg border border-white/20 bg-white/10 p-6 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-white/15 hover:shadow-lg'
                         >
                           <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-500/20 to-orange-500/20'>
-                            <GiAchievement className='h-10 w-10 text-yellow-500 transition-all duration-1000 hover:text-yellow-300'></GiAchievement>
+                            <GiAchievement
+                              className={`h-10 w-10 ${
+                                achievement.position &&
+                                colorMap[achievement.position]
+                                  ? colorMap[achievement.position]
+                                  : 'text-white'
+                              } transition-all duration-1000 hover:brightness-125`}
+                            />
                           </div>
                           <h3 className='mb-2 text-xl font-semibold text-white'>
                             {achievement.title}
@@ -48,6 +60,11 @@ export default function AchievementsPage() {
                           <p className='text-sm text-gray-300'>
                             {achievement.description}
                           </p>
+                          {achievement.category && (
+                            <span className='mt-3 inline-block rounded-full bg-blue-600/20 px-3 py-1 text-sm text-blue-300'>
+                              {achievement.category}
+                            </span>
+                          )}
                         </div>
                       ))}
                     </div>
