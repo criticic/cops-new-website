@@ -1,7 +1,7 @@
 export default function ProjectsPage() {
   return (
-    <div className='min-h-screen bg-black'>
-      <div className='pt-32 pb-20'>
+    <div className='min-h-screen'>
+      <div className='relative z-20 pt-32 pb-20'>
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='mb-16 text-center'>
             <h1 className='mb-4 text-4xl font-bold text-white md:text-5xl'>
@@ -11,7 +11,7 @@ export default function ProjectsPage() {
 
           <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
             {/* Project Card 1 */}
-            <div className='rounded-lg border border-gray-700/50 bg-gray-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-gray-900/70'>
+            <div className='rounded-lg border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-white/15'>
               <div className='mb-4 flex h-48 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500/20 to-indigo-500/20'>
                 <span className='text-gray-400'>Project Image</span>
               </div>
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
             </div>
 
             {/* Project Card 2 */}
-            <div className='rounded-lg border border-gray-700/50 bg-gray-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-gray-900/70'>
+            <div className='rounded-lg border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-white/15'>
               <div className='mb-4 flex h-48 items-center justify-center rounded-lg bg-gradient-to-br from-green-500/20 to-blue-500/20'>
                 <span className='text-gray-400'>Project Image</span>
               </div>
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
             </div>
 
             {/* Project Card 3 */}
-            <div className='rounded-lg border border-gray-700/50 bg-gray-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-gray-900/70'>
+            <div className='rounded-lg border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-white/15'>
               <div className='mb-4 flex h-48 items-center justify-center rounded-lg bg-gradient-to-br from-orange-500/20 to-red-500/20'>
                 <span className='text-gray-400'>Project Image</span>
               </div>

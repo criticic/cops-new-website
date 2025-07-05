@@ -1,6 +1,6 @@
 'use client';
 import { Suspense } from 'react';
-import AchievementsSection from '@/components/layout/AchievementsSubsection';
+import AchievementsSubsection from '@/components/layout/AchievementsSubsection';
 import ProjectsSubsection from '@/components/layout/ProjectsSubsection';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
@@ -290,7 +290,7 @@ export default function Home2() {
       >
         <HeroSection />
       </Suspense>
-      <AchievementsSection />
+      <AchievementsSubsection />
       <ProjectsSubsection />
     </div>
   );
