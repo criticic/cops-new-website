@@ -8,7 +8,7 @@ export default function Navbar() {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const fullText = 'Club of ProgrammerS';
+  const fullText = 'Club Of ProgrammerS';
   const finalText = 'COPS';
   const pathName = usePathname();
 
