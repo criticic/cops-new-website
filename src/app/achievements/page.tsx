@@ -1,4 +1,3 @@
-import AccordionDemo from '@/components/Accordion';
 import AchievementsTimeline from '@/components/AchievementTimeline';
 
 export default function AchievementsPage() {
