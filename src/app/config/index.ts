@@ -1,5 +1,8 @@
 import { helm } from './helm';
 import { achievements } from './achievements';
+// Type definitions
+
+
 
 const contactInfo = {
   email: 'iitbhu.cops@gmail.com',
@@ -15,8 +18,48 @@ const socialLinks = {
   hashnode: 'https://blogs.copsiitbhu.co.in/',
 };
 
+
+
 const projects = [];
+
+
 
 const years = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016];
 
-export { years, helm, contactInfo, socialLinks, projects, achievements };
+interface Resource {
+  title: string;
+  author: string[];
+  topics: string[];
+  tags: string[];
+  vertical: string;
+  filePath: string;
+}
+
+const resources: Resource[] = [
+  {
+    title: "CSOC Web Track",
+    author: ["COPS SDG"],
+    topics: ["Web Dev", "Frontend"],
+    tags: ["React", "JavaScript", "mongoDB"],
+    vertical: "SDG",
+    filePath: '/mdFiles/web.md'
+  },
+  {
+    title: "CSOC Web3 Track",
+    author: ["COPS SDG"],
+    topics: ["Web Dev", "Frontend"],
+    tags: ["React", "JavaScript", "mongoDB"],
+    vertical: "SDG",
+    filePath: '/mdFiles/web3.md'
+  },
+  {
+    title: "CSOC Flutter Track",
+    author: ["COPS SDG"],
+    topics: ["Web Dev", "Frontend"],
+    tags: ["React", "JavaScript", "mongoDB"],
+    vertical: "SDG",
+    filePath: '/mdFiles/flutter.md'
+  },
+];
+
+export { resources, years, helm, contactInfo, socialLinks, projects, achievements };
