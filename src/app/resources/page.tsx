@@ -1,6 +1,6 @@
 'use client';
 
-import { Component, useState } from "react";
+import { useState } from "react";
 import { BiCodeBlock } from 'react-icons/bi';
 import { HiOutlineShare } from 'react-icons/hi';
 import { BiChip } from 'react-icons/bi';
@@ -86,7 +86,7 @@ export default function ResourcesPage() {
 
                 <button
                   onClick={() => setSelectedPath(resource.filePath)}
-                  className="mt-2 px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  className="mt-2 px-3 py-2 bg-blue-500/40 text-white rounded hover:bg-blue-700/50"
                 >
                   Start Exploring
                 </button>

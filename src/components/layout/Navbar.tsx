@@ -162,6 +162,13 @@ export default function Navbar() {
                 Projects
               </Link>
               <Link
+                href='/resources'
+                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Resources
+              </Link>
+              <Link
                 href='/team'
                 className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
                 onClick={() => setIsMobileMenuOpen(false)}
