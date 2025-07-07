@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import StarBorder from '@/components/StarBorder';
 
 export default function Navbar() {
   const [displayText, setDisplayText] = useState('');
@@ -109,12 +111,14 @@ export default function Navbar() {
               >
                 Achievements
               </Link>
-              <Link
-                href='https://week.copsiitbhu.co.in/'
-                className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
-              >
-                COPS Week
-              </Link>
+              <StarBorder as='button' color='cyan' speed='3s' thickness={1.5}>
+                <Link
+                  href='https://week.copsiitbhu.co.in/'
+                  className='flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white'
+                >
+                  COPS Week <FaExternalLinkAlt className='text-xs' />
+                </Link>
+              </StarBorder>
             </div>
           </div>
 
@@ -182,6 +186,14 @@ export default function Navbar() {
               >
                 Achievements
               </Link>
+              <StarBorder as='button' color='cyan' speed='3s' thickness={1.5}>
+                <Link
+                  href='https://week.copsiitbhu.co.in/'
+                  className='flex items-center justify-between rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white'
+                >
+                  COPS Week <FaExternalLinkAlt className='text-xs' />
+                </Link>
+              </StarBorder>
             </div>
           </div>
         )}

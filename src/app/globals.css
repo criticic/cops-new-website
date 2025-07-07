@@ -75,3 +75,78 @@ body {
     height: 0;
   }
 }
+/* Star Border Animation Keyframes */
+@keyframes star-movement-bottom {
+  0% { 
+    transform: translate(0%, 0%); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translate(-100%, 0%); 
+    opacity: 0; 
+  }
+}
+
+@keyframes star-movement-top {
+  0% { 
+    transform: translate(0%, 0%); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translate(100%, 0%); 
+    opacity: 0; 
+  }
+}
+
+/* Star Border Utility Classes */
+.animate-star-movement-bottom {
+  animation: star-movement-bottom 10s linear infinite alternate;
+}
+
+.animate-star-movement-top {
+  animation: star-movement-top 8s linear infinite alternate;
+}
+
+/* Additional utility classes if needed */
+.star-border-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.border-gradient-bottom {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.7;
+  bottom: -11px;
+  right: -250%;
+  border-radius: 50%;
+  z-index: 0;
+  animation: star-movement-bottom 10s linear infinite alternate;
+}
+
+.border-gradient-top {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.7;
+  top: -10px;
+  left: -250%;
+  border-radius: 50%;
+  z-index: 0;
+  animation: star-movement-top 8s linear infinite alternate;
+}
+
+.inner-content {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(to bottom, #000000, #374151);
+  border: 1px solid #374151;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 26px;
+  border-radius: 20px;
+}
