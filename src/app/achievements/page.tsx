@@ -1,77 +1,30 @@
-import { achievements } from '../config';
-import { GiAchievement } from 'react-icons/gi';
+import AchievementsTimeline from '@/components/AchievementTimeline';
 
 export default function AchievementsPage() {
-  const colorMap: Record<number, string> = {
-    1: 'text-yellow-500',
-    2: 'text-gray-400',
-    3: 'text-orange-500',
-  };
-  const achievementsByYear = Object.groupBy(
-    achievements,
-    (achievement) => achievement.year
-  );
 
   return (
     <div className='min-h-screen'>
       <div className='relative z-20 pt-32 pb-20'>
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-          <div className='mb-12 text-center'>
-            <h1 className='mb-4 text-4xl font-bold text-white md:text-5xl'>
-              Our <span className='text-yellow-500'>Achievements</span>
-            </h1>
-          </div>
+          <div className='ml-2'>
+            <div className='mb-12 text-center'>
+              <h1 className='mb-4 text-4xl font-bold text-white md:text-6xl'>
+                Our <span className='bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-300 bg-clip-text text-transparent'>Achievements</span>
+              </h1>
+            </div>
 
-          {/* Awards Section */}
-          <div className='mb-16'>
-            <h2 className='mb-12 text-center text-2xl font-bold text-white'>
-              Awards & Recognition
-            </h2>
-            <div className='grid grid-cols-1 gap-9'>
-              {Object.entries(achievementsByYear)
-                .sort(([a], [b]) => Number(b) - Number(a))
-                .map(([year, yearAchievements]) => (
-                  <div key={year}>
-                    <h2 className='mb-3 text-center text-4xl font-bold text-blue-500'>
-                      {year}
-                    </h2>
-                    <div className='mx-4 grid h-fit [grid-template-columns:repeat(auto-fit,minmax(400px,200px))] justify-center gap-8 lg:grid-cols-3'>
-                      {yearAchievements?.map((achievement) => (
-                        <div
-                          key={achievement.title}
-                          className='rounded-lg border border-white/20 bg-white/10 p-6 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-white/15 hover:shadow-lg'
-                        >
-                          <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-500/20 to-orange-500/20'>
-                            <GiAchievement
-                              className={`h-10 w-10 ${
-                                achievement.position &&
-                                colorMap[achievement.position]
-                                  ? colorMap[achievement.position]
-                                  : 'text-white'
-                              } transition-all duration-1000 hover:brightness-125`}
-                            />
-                          </div>
-                          <h3 className='mb-2 text-xl font-semibold text-white'>
-                            {achievement.title}
-                          </h3>
-                          <p className='mb-2 text-yellow-400'>
-                            {achievement.level}
-                          </p>
-                          <p className='text-sm text-gray-300'>
-                            {achievement.description}
-                          </p>
-                          {achievement.category && (
-                            <span className='mt-3 inline-block rounded-full bg-blue-600/20 px-3 py-1 text-sm text-blue-300'>
-                              {achievement.category}
-                            </span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+            {/* Awards Section */}
+            <div className='mb-16 flex flex-col items-center'>
+              <h2 className='mb-12 text-center text-2xl font-bold text-white'>
+                Awards & Recognition
+              </h2>
+              {/* <AccordionDemo /> */}
+              <AchievementsTimeline/>
+              
             </div>
           </div>
+          
+          <hr className='my-2 mb-6 border-white' />
 
           {/* Stats Section */}
           <div className='mb-16'>
@@ -105,6 +58,7 @@ export default function AchievementsPage() {
               </div>
             </div>
           </div>
+          <hr className='my-2 mb-6 border-white' />
 
           {/* Timeline Section */}
           <div>
