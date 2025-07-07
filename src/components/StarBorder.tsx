@@ -1,53 +1,66 @@
-import React from "react";
+import React from 'react';
 
-type StarBorderProps<T extends React.ElementType> =
-  React.ComponentPropsWithoutRef<T> & {
-    as?: T;
-    className?: string;
-    children?: React.ReactNode;
-    color?: string;
-    speed?: React.CSSProperties['animationDuration'];
-    thickness?: number;
-  }
+type StarBorderProps<T extends React.ElementType = 'button'> = {
+  as?: T;
+  className?: string;
+  children?: React.ReactNode;
+  color?: string;
+  speed?: React.CSSProperties['animationDuration'];
+  thickness?: number;
+} & Omit<React.ComponentPropsWithoutRef<T>, keyof {
+  as?: T;
+  className?: string;
+  children?: React.ReactNode;
+  color?: string;
+  speed?: React.CSSProperties['animationDuration'];
+  thickness?: number;
+}>;
 
-const StarBorder = <T extends React.ElementType = "button">({
-  as,
-  className = "",
-  color = "white",
-  speed = "6s",
-  thickness = 1,
-  children,
-  ...rest
-}: StarBorderProps<T>) => {
-  const Component = as || "button";
+const StarBorder = <T extends React.ElementType = 'button'>(
+  props: StarBorderProps<T>
+) => {
+  const {
+    as,
+    className = '',
+    color = 'white',
+    speed = '6s',
+    thickness = 1,
+    children,
+    style,
+    ...rest
+  } = props;
 
-  return (
-    <Component 
-      className={`relative inline-block overflow-hidden rounded-[20px] ${className}`} 
-      {...(rest as any)}
-      style={{
+  const Component = as || 'button';
+
+  return React.createElement(
+    Component,
+    {
+      className: `relative inline-block overflow-hidden rounded-[20px] ${className}`,
+      style: {
         padding: `${thickness}px 0`,
-        ...(rest as any).style,
-      }}
-    >
+        ...(style || {}),
+      },
+      ...rest,
+    },
+    <>
       <div
-        className="absolute w-[300%] h-[50%] opacity-70 bottom-[-11px] right-[-250%] rounded-full animate-star-movement-bottom z-0"
+        className="animate-star-movement-bottom absolute right-[-250%] bottom-[-11px] z-0 h-[50%] w-[300%] rounded-full opacity-70"
         style={{
           background: `radial-gradient(circle, ${color}, transparent 10%)`,
           animationDuration: speed,
         }}
-      ></div>
+      />
       <div
-        className="absolute w-[300%] h-[50%] opacity-70 top-[-10px] left-[-250%] rounded-full animate-star-movement-top z-0"
+        className="animate-star-movement-top absolute top-[-10px] left-[-250%] z-0 h-[50%] w-[300%] rounded-full opacity-70"
         style={{
           background: `radial-gradient(circle, ${color}, transparent 10%)`,
           animationDuration: speed,
         }}
-      ></div>
-      <div className="relative z-10 bg-gradient-to-b from-black to-gray-900 border border-gray-800 rounded-[20px]">
+      />
+      <div className="relative z-10 rounded-[20px] border border-gray-800 bg-gradient-to-b from-black to-gray-900">
         {children}
       </div>
-    </Component>
+    </>
   );
 };
 
