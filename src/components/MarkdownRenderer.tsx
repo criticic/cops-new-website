@@ -51,8 +51,8 @@ export default function MarkdownRenderer({
                         exit={{ y: 50, opacity: 0 }}
                         transition={{ duration: 0.4 }}
                         className="
-                            relative lg:max-w-[85vw] max-w-[90vw]  w-full mt-[7rem]
-                            h-[750px] overflow-auto
+                            relative lg:max-w-[85vw] max-w-[90vw] w-full mt-[7rem]
+                             h-[80vh] overflow-auto
                             rounded-lg shadow-2xl
                             bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 border border-gray-400
 

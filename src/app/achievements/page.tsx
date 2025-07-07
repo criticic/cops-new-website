@@ -1,5 +1,3 @@
-import { achievements } from '../config';
-import { GiAchievement } from 'react-icons/gi';
 import AccordionDemo from '@/components/Accordion';
 
 export default function AchievementsPage() {

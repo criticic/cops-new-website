@@ -33,9 +33,9 @@ export default function ResourcesPage() {
   };
 
   return (
-    <div className='min-h-screen flex flex-col items-center relative'>
-      <div className=' relative z-20 pt-32 pb-20'>
-        <div className='mx-auto max-w-full px-4 sm:px-6 lg:px-4'>
+    <div className='min-h-screen relative overflow-x-hidden'>
+      <div className='relative flex flex-col items-center z-20 pt-32 pb-20'>
+        <div className='mx-auto px-4 sm:px-6 lg:px-4'>
           <div className='mb-12 text-center'>
             <h1 className='mb-4 text-4xl font-bold text-white md:text-5xl'>
               <span className='font-agency-fb text-6xl font-bold bg-gradient-to-r from-blue-200 to-violet-200 bg-clip-text text-transparent'>
@@ -44,13 +44,13 @@ export default function ResourcesPage() {
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-8 justify-items-center">
             {resources.map((resource) => (
               <div
                 key={resource.title}
-                className={`flex flex-col items-start gap-2 w-[600px] h-[450px] rounded-lg border border-white/20 ${resourceBG[resource.vertical] || 'bg-white/10'} p-6 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:${resourceBG[resource.vertical] || 'bg-white/15'} hover:shadow-lg`}
+                className={`flex flex-col items-start justify-between gap-2 w-[90vw] md:w-[600px] h-[500px] rounded-lg border border-white/20 ${resourceBG[resource.vertical] || 'bg-white/10'} p-5 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:${resourceBG[resource.vertical] || 'bg-white/15'} hover:shadow-lg`}
               >
-                <div className=" mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-blue-400/20 to-indigo-500/20">
+                <div className=" mb-3 flex h-fit w-fit p-4 items-center justify-center rounded-full bg-gradient-to-br from-blue-400/20 to-indigo-500/20">
                   {(() => {
                     const Icon = iconSrc[resource.vertical];
                     return Icon ? (
@@ -59,7 +59,7 @@ export default function ResourcesPage() {
                   })()}
                 </div>
 
-                <h3 className="mb-2 text-3xl font-semibold text-white">
+                <h3 className="mb-2 text-3xl font-semibold text-white text-start">
                   {resource.title}
                 </h3>
 
@@ -76,7 +76,7 @@ export default function ResourcesPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="mb-1">
+                <div className="mb-1 flex flex-wrap gap-y-2">
                   {resource.tags.map((tag) => (
                     <span key={tag} className="mr-2 inline-block rounded-full bg-indigo-500/50 px-3 py-1 text-sm text-white">
                       {tag}
