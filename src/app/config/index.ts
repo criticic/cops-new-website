@@ -39,7 +39,7 @@ const resources: Resource[] = [
   {
     title: "CSOC Web Track",
     author: ["COPS SDG"],
-    topics: ["Web Dev", "Frontend"],
+    topics: ["Web Dev", "Frontend","Full Stack"],
     tags: ["React", "JavaScript", "mongoDB"],
     vertical: "SDG",
     filePath: '/mdFiles/web.md'
@@ -47,17 +47,17 @@ const resources: Resource[] = [
   {
     title: "CSOC Web3 Track",
     author: ["COPS SDG"],
-    topics: ["Web Dev", "Frontend"],
+    topics: ["Web Dev", "Frontend","Full Stack"],
     tags: ["React", "JavaScript", "mongoDB"],
-    vertical: "SDG",
+    vertical: "CPG",
     filePath: '/mdFiles/web3.md'
   },
   {
     title: "CSOC Flutter Track",
     author: ["COPS SDG"],
-    topics: ["Web Dev", "Frontend"],
+    topics: ["Web Dev", "Frontend","Full Stack"],
     tags: ["React", "JavaScript", "mongoDB"],
-    vertical: "SDG",
+    vertical: "IG",
     filePath: '/mdFiles/flutter.md'
   },
 ];
