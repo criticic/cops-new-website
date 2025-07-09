@@ -1,5 +1,3 @@
-'use client';
-
 export default function HeroSubsection() {
   return (
     <section className='relative min-h-screen overflow-hidden'>

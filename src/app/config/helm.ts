@@ -25,7 +25,7 @@ const helm: HelmTerm[] = [
         name: 'Sagnik Mandal',
         email: 'sagnik.mandal.mst23@iitbhu.ac.in',
         por: 'Secretary',
-        photo: 'https://i.pravatar.cc/300',
+        photo: '/team/sagnik.jpg',
         socials: {},
       },
       {
