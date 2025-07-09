@@ -39,24 +39,24 @@ const resources: Resource[] = [
   {
     title: "CSOC Web Track",
     author: ["COPS SDG"],
-    topics: ["Web Dev", "Frontend","Full Stack"],
-    tags: ["React", "JavaScript", "mongoDB"],
+    topics: ["Web Development", "Frontend", "Backend"],
+    tags: ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Node.js", "Express", "MongoDB", "REST APIs", "Authentication"],
     vertical: "SDG",
     filePath: '/mdFiles/web.md'
   },
   {
     title: "CSOC Web3 Track",
     author: ["COPS SDG"],
-    topics: ["Web Dev", "Frontend","Full Stack"],
-    tags: ["React", "JavaScript", "mongoDB"],
+    topics: ["Blockchain", "Smart Contracts", "DeFi"],
+    tags: ["Bitcoin", "Ethereum", "Solidity", "MetaMask", "Remix", "Hardhat", "Cryptography", "ECDSA", "Zero-Knowledge"],
     vertical: "CPG",
     filePath: '/mdFiles/web3.md'
   },
   {
     title: "CSOC Flutter Track",
     author: ["COPS SDG"],
-    topics: ["Web Dev", "Frontend","Full Stack"],
-    tags: ["React", "JavaScript", "mongoDB"],
+    topics: ["Mobile Development", "Cross-platform", "App Development"],
+    tags: ["Flutter", "Dart", "FVM", "Mobile UI", "Cross-platform"],
     vertical: "IG",
     filePath: '/mdFiles/flutter.md'
   },
