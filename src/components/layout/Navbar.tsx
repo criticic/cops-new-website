@@ -87,12 +87,12 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className='hidden md:block'>
             <div className='flex items-center space-x-6'>
-              <Link
+              {/* <Link
                 href='/projects'
                 className={`${pathName === '/projects' ? 'bg-white/10' : ''} rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white`}
               >
                 Projects
-              </Link>
+              </Link> */}
               <Link
                 href='/resources'
                 className={`${pathName === '/resources' ? 'bg-white/10' : ''} rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white`}
@@ -158,13 +158,13 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className='mt-4 border-t border-white/20 pt-4 md:hidden'>
             <div className='flex flex-col space-y-2'>
-              <Link
+              {/* <Link
                 href='/projects'
                 className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Projects
-              </Link>
+              </Link> */}
               <Link
                 href='/resources'
                 className='rounded-xl px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white'

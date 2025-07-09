@@ -25,15 +25,21 @@ export default function TeamPage() {
                   ? 'Current Helm'
                   : `${year.term} Helm`}
               </h2>
-              <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
+              <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center'>
                 {year.team?.map((person, personIndex) => {
                   const isCurrentTerm = year.term === '2025-2026';
+                  const isLastItem = personIndex === year.team.length - 1;
+                  const remainder = year.team.length % 3;
+                  const shouldCenter = isLastItem && remainder === 1;
+                  
                   return (
                     <div
-                      className={`flex flex-col items-center rounded-lg border p-6 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 ${
+                      className={`flex flex-col items-center rounded-lg border p-6 text-center shadow-2xl backdrop-blur-xl transition-all duration-300 w-full max-w-sm ${
                         isCurrentTerm
                           ? 'border-[#68d9d9]/30 bg-white/10 hover:border-[#68d9d9]/50 hover:bg-white/15 hover:shadow-lg hover:shadow-[#68d9d9]/20'
                           : 'border-white/20 bg-white/10 hover:border-white/30 hover:bg-white/15'
+                      } ${
+                        shouldCenter ? 'lg:col-start-2' : ''
                       }`}
                       key={personIndex}
                     >
@@ -66,7 +72,7 @@ export default function TeamPage() {
                         </p>
                         {person.email && (
                           <a
-                            className='mt-1 text-xs text-gray-400'
+                            className='mt-1 text-xs text-gray-400 block'
                             href={`mailto:${person.email}`}
                           >
                             {person.email}
@@ -75,7 +81,7 @@ export default function TeamPage() {
                       </div>
 
                       {/* Social Icons */}
-                      <div className='flex justify-center space-x-2'>
+                      <div className='flex justify-center space-x-2 mt-auto'>
                         {person.socials.website && (
                           <a
                             href={person.socials.website}
