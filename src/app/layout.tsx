@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import MainLayout from '@/components/layout/MainLayout';
 import Dither from '@/components/Dither';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const agencyFBBold = localFont({
   src: [
@@ -45,9 +46,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <head>
+        <meta name="google-site-verification" content="iW_N7TEFOpYFR10FbtzU5bDjA5sEUA_7YjE3PwJ_wdA" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${agencyFBBold.variable} antialiased`}
       >
+        <GoogleAnalytics gaId='G-YNJ7TXFBM1' />
         {/* Global Dither Background */}
         <div className='fixed inset-0 z-[-1]'>
           <Dither
